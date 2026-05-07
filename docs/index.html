@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DBStudio — Local Database IDE</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f1117;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #1a1a2e;
+      border: 1px solid #2a2a3e;
+      border-radius: 16px;
+      padding: 48px 40px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1e3a5f;
+      color: #4d9ef7;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    h1 span { color: #4d9ef7; }
+
+    .subtitle {
+      font-size: 16px;
+      color: #888;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 36px;
+      text-align: left;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    .feature::before {
+      content: '✓';
+      color: #57ab5a;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .downloads {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .btn:hover { opacity: 0.85; }
+
+    .btn-mac {
+      background: #4d9ef7;
+      color: #fff;
+    }
+
+    .btn-win {
+      background: #2a2a3e;
+      color: #e0e0e0;
+      border: 1px solid #3a3a5e;
+    }
+
+    .releases-link {
+      font-size: 13px;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .releases-link:hover { color: #888; }
+
+    .note {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #2a2a3e;
+      font-size: 12px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .note strong { color: #888; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Free &amp; Open Source</div>
+    <h1>DB<span>Studio</span></h1>
+    <p class="subtitle">
+      A simple, local database IDE for PostgreSQL and MongoDB.<br>
+      No AI. No cloud. Runs entirely on your machine.
+    </p>
+
+    <div class="features">
+      <div class="feature">PostgreSQL &amp; MongoDB support</div>
+      <div class="feature">Schema browser with table &amp; collection explorer</div>
+      <div class="feature">Monaco editor — same engine as VS Code</div>
+      <div class="feature">SQL squiggle errors &amp; schema-aware completions</div>
+      <div class="feature">Shell-style MongoDB query syntax</div>
+      <div class="feature">Import JSON / ZIP files directly into MongoDB</div>
+      <div class="feature">Completely offline — no data leaves your machine</div>
+    </div>
+
+    <div class="downloads">
+      <a class="btn btn-mac" href="https://github.com/Chris-garibay/terrelldb/releases/latest/download/DBStudio-1.0.0-mac-x64.dmg">
+        ⬇ Download for Mac (Intel)
+      </a>
+      <a class="btn btn-mac" href="https://github.com/Chris-garibay/terrelldb/releases/latest/download/DBStudio-1.0.0-mac-arm64.dmg">
+        ⬇ Download for Mac (Apple Silicon)
+      </a>
+      <a class="btn btn-win" href="https://github.com/Chris-garibay/terrelldb/releases/latest/download/DBStudio-1.0.0-windows-setup.exe">
+        ⬇ Download for Windows
+      </a>
+    </div>
+
+    <a class="releases-link" href="https://github.com/Chris-garibay/terrelldb/releases">
+      View all releases →
+    </a>
+
+    <div class="note">
+      <strong>macOS:</strong> After downloading, right-click the app and choose Open the first time.<br>
+      <strong>Windows:</strong> Run the installer — click "More info → Run anyway" if Windows SmartScreen appears.
+    </div>
+  </div>
+</body>
+</html>
